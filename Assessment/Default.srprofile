@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestProfile xmlns="http://www.specflow.org/schemas/plus/TestProfile/1.5">
+  <Settings projectName="Assessment" reportTemplate="..\MyReportTemplate.cshtml"/>
+	<Execution testThreadCount="5" testSchedulingMode="Random" stopAfterFailures ="0" retryFor="Failing" retryCount="1"/>
+	<Environment testThreadIsolation="SharedAppDomain"/>
+	<VSTest testRetryResults="Unified" passRateAbsolute="1"/>
+  <TestAssemblyPaths>
+    <TestAssemblyPath>Assessment.dll</TestAssemblyPath>
+  </TestAssemblyPaths>
+
+</TestProfile>

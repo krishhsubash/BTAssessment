@@ -1,0 +1,150 @@
+﻿2022-04-27T08:40:12.3161578+05:30;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2022-04-27T08:40:12.3165957+05:30;VSTestExecutionThread;Info;SpecFlow+Runner 3.9.31 in Framework netcore31 in x64 mode execution started
+2022-04-27T08:40:12.3166078+05:30;VSTestExecutionThread;Info;TestAdapter Location: C:\Users\subkrish\source\repos\Assessment\Assessment\bin\Debug\netcoreapp3.1\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2022-04-27T08:40:12.3203386+05:30;VSTestExecutionThread;Info;Current UserName: 'subkrish', MachineName: 'VMIESEWAZ0012'
+2022-04-27T08:40:12.6827722+05:30;VSTestExecutionThread;Info;SpecRun: running tests in C:\Users\subkrish\source\repos\Assessment\Assessment\bin\Debug\netcoreapp3.1\Assessment.dll
+2022-04-27T08:40:12.6831725+05:30;VSTestExecutionThread;Info;Output folder configured to "C:\Users\subkrish\source\repos\Assessment\TestResults" (default)
+2022-04-27T08:40:12.6837205+05:30;VSTestExecutionThread;Info;Profile: Assessment
+2022-04-27T08:40:12.8400530+05:30;VSTestExecutionThread;Info;Log file path: C:\Users\subkrish\source\repos\Assessment\TestResults\Assessment_Assessment_2022-04-27T084012.log
+2022-04-27T08:40:12.9210619+05:30;Thread#12;Info;Checking activation
+2022-04-27T08:40:13.1178884+05:30;Thread#12;Info;Activated.
+2022-04-27T08:40:13.1182626+05:30;Thread#12;Info;Activation check completed
+2022-04-27T08:40:13.1186421+05:30;Thread#12;Info;Starting test run
+2022-04-27T08:40:13.4196152+05:30;Thread#12;Info;Discovering target: Default
+2022-04-27T08:40:13.4232815+05:30;Thread#12;Info;Discovering tests from assembly: C:\Users\subkrish\source\repos\Assessment\Assessment\bin\Debug\netcoreapp3.1\Assessment.dll
+2022-04-27T08:40:13.7470530+05:30;Thread#12;Info;Discovered tests from assembly: C:\Users\subkrish\source\repos\Assessment\Assessment\bin\Debug\netcoreapp3.1\Assessment.dll
+2022-04-27T08:40:13.7494146+05:30:Test Suite Dump
+2022-04-27T08:40:13.7529912+05:30:#0: Assessment/Assessment - 
+2022-04-27T08:40:13.7530224+05:30:#1: Default - 
+2022-04-27T08:40:13.7530261+05:30:#2: Assessment - 
+2022-04-27T08:40:13.7530291+05:30:#3: JiraFeature - 
+2022-04-27T08:40:13.7547350+05:30:#4: Jira Feature - TestAssembly:Assessment/Feature:JiraFeature/Scenario:Jira+Feature
+2022-04-27T08:40:13.7548019+05:30:End: Test Suite Dump
+2022-04-27T08:40:13.9543539+05:30:Thread#0:Scheduler: get next test for thread 0
+2022-04-27T08:40:13.9577017+05:30:Thread#:Scheduler: testitem #4 from normal test queue 
+2022-04-27T08:40:13.9577608+05:30:Thread#0:Scheduler: considering testitem #4 for thread 0
+2022-04-27T08:40:13.9669011+05:30:Thread#0:TestItem#4:testItemMatchesCurrentTestThread:UnSpecific
+2022-04-27T08:40:13.9669199+05:30:Thread#0:TestItem#4:runsOnOneOtherThreadSpecific:False
+2022-04-27T08:40:13.9669233+05:30:Thread#0:TestItem#4:runsOnOneOtherThreadUnspecific:True
+2022-04-27T08:40:13.9669281+05:30:Thread#0:Scheduler: using testitem #4 for thread 0
+2022-04-27T08:40:13.9679222+05:30:Thread#0:Scheduler: Test #4 is scheduled for thread
+2022-04-27T08:40:13.9717932+05:30:Thread#0:Scheduler: with testItemExecutionIndex 0
+2022-04-27T08:40:13.9749148+05:30:Thread #0: creating new test thread executor for Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Default)
+2022-04-27T08:40:13.9791323+05:30:Thread #0: Creating test assembly executor for execution model SharedAppDomain
+2022-04-27T08:40:13.9794602+05:30:Thread #0: Creating test assembly executor for execution model SharedAppDomain
+2022-04-27T08:40:13.9805288+05:30:Thread #0: using TechTalk.SpecRun.Framework.Execution.SharedAppDomain.SharedAppDomainTestAssemblyExecutorHost to execute tests
+2022-04-27T08:40:14.0123898+05:30:Assembly resolving TechTalk.SpecRun.Framework.Executor, Culture=neutral, PublicKeyToken=null
+2022-04-27T08:40:14.0172775+05:30:[AssemblyCache] Trying to resolve 'TechTalk.SpecRun.Framework.Executor' from .deps.json file
+2022-04-27T08:40:14.0173018+05:30:[AssemblyCache] Could not resolve 'TechTalk.SpecRun.Framework.Executor' from .deps.json
+2022-04-27T08:40:14.0192104+05:30:[AssemblyCache] Trying to resolve 'TechTalk.SpecRun.Framework.Executor' in folder 'C:\Users\subkrish\source\repos\Assessment\Assessment\bin\Debug\netcoreapp3.1'
+2022-04-27T08:40:14.0197381+05:30:[AssemblyCache] Trying to resolve 'TechTalk.SpecRun.Framework.Executor' to 'C:\Users\subkrish\source\repos\Assessment\Assessment\bin\Debug\netcoreapp3.1\TechTalk.SpecRun.Framework.Executor.dll'
+2022-04-27T08:40:14.0198839+05:30:[AssemblyCache] Trying to resolve 'TechTalk.SpecRun.Framework.Executor' to 'C:\Users\subkrish\source\repos\Assessment\Assessment\bin\Debug\netcoreapp3.1\TechTalk.SpecRun.Framework.Executor.exe'
+2022-04-27T08:40:14.0199564+05:30:[AssemblyCache] Could not resolve 'TechTalk.SpecRun.Framework.Executor' in folder 'C:\Users\subkrish\source\repos\Assessment\Assessment\bin\Debug\netcoreapp3.1'
+2022-04-27T08:40:14.0204453+05:30:TargetFramework: .NETCoreApp,Version=v3.1
+2022-04-27T08:40:14.0208304+05:30:Tfm: netcoreapp3.1
+2022-04-27T08:40:14.0208440+05:30:[AssemblyCache] Trying to resolve 'TechTalk.SpecRun.Framework.Executor' in folder 'C:\Users\subkrish\source\repos\Assessment\Assessment\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1'
+2022-04-27T08:40:14.0208467+05:30:[AssemblyCache] Trying to resolve 'TechTalk.SpecRun.Framework.Executor' to 'C:\Users\subkrish\source\repos\Assessment\Assessment\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\TechTalk.SpecRun.Framework.Executor.dll'
+2022-04-27T08:40:14.0210472+05:30:[AssemblyCache] Found file 'C:\Users\subkrish\source\repos\Assessment\Assessment\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\TechTalk.SpecRun.Framework.Executor.dll' for assembly 'TechTalk.SpecRun.Framework.Executor'
+2022-04-27T08:40:14.0318048+05:30:Thread#1:Scheduler: get next test for thread 1
+2022-04-27T08:40:14.0663048+05:30:Thread#:Scheduler: at the end of normal test queue
+2022-04-27T08:40:14.0663462+05:30:Thread#1:Scheduler: enumerator for thread is at end
+2022-04-27T08:40:14.0663512+05:30:Thread#1:Scheduler: No more tests for thread
+2022-04-27T08:40:14.1832092+05:30:[AssemblyCache] Resolved 'TechTalk.SpecRun.Framework.Executor' to C:\Users\subkrish\source\repos\Assessment\Assessment\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\TechTalk.SpecRun.Framework.Executor.dll
+2022-04-27T08:40:14.1940063+05:30:Thread#2:Scheduler: get next test for thread 2
+2022-04-27T08:40:14.1940249+05:30:Thread#:Scheduler: at the end of normal test queue
+2022-04-27T08:40:14.1940281+05:30:Thread#2:Scheduler: enumerator for thread is at end
+2022-04-27T08:40:14.1940311+05:30:Thread#2:Scheduler: No more tests for thread
+2022-04-27T08:40:14.2607807+05:30:Thread#3:Scheduler: get next test for thread 3
+2022-04-27T08:40:14.2608012+05:30:Thread#:Scheduler: at the end of normal test queue
+2022-04-27T08:40:14.2608053+05:30:Thread#3:Scheduler: enumerator for thread is at end
+2022-04-27T08:40:14.2608083+05:30:Thread#3:Scheduler: No more tests for thread
+2022-04-27T08:40:14.3795578+05:30:Thread#4:Scheduler: get next test for thread 4
+2022-04-27T08:40:14.3795794+05:30:Thread#:Scheduler: at the end of normal test queue
+2022-04-27T08:40:14.3795831+05:30:Thread#4:Scheduler: enumerator for thread is at end
+2022-04-27T08:40:14.3795863+05:30:Thread#4:Scheduler: No more tests for thread
+2022-04-27T08:40:14.8054476+05:30:Thread#0:T:-> Loading plugin C:\Users\subkrish\source\repos\Assessment\Assessment\bin\Debug\netcoreapp3.1\SolidToken.SpecFlow.DependencyInjection.SpecFlowPlugin.dll
+2022-04-27T08:40:15.1742844+05:30:Thread#0:T:-> Loading plugin C:\Users\subkrish\source\repos\Assessment\Assessment\bin\Debug\netcoreapp3.1\SpecRun.Runtime.SpecFlowPlugin.dll
+2022-04-27T08:40:15.3135993+05:30:Thread#0:T:-> Loading plugin C:\Users\subkrish\source\repos\Assessment\Assessment\bin\Debug\netcoreapp3.1\Assessment.dll
+2022-04-27T08:40:15.6119216+05:30:Thread#0:T:-> Using specflow.json
+2022-04-27T08:40:15.7308965+05:30:Thread#0: Test #4/0 is started on thread #0
+2022-04-27T08:40:16.5080124+05:30:Thread#0:B:Given I launch the  Jira Url
+2022-04-27T08:40:30.5558220+05:30:Thread#0:T:done: LoginSteps.GivenILaunchTheJiraUrl() (14.0s)
+2022-04-27T08:40:30.5576272+05:30:Thread#0:B:When I enter username as "ccngbt@gmail.com" in the Login Page
+2022-04-27T08:40:31.4059053+05:30:Thread#0:T:done: LoginSteps.WhenIEnterUsernameAsInTheLoginPage("ccngbt@gmail.com") (0.8s)
+2022-04-27T08:40:31.4068975+05:30:Thread#0:B:And I click on "Continue" button in Login Page
+2022-04-27T08:40:31.7435232+05:30:Thread#0:T:done: LoginSteps.WhenIClickOnButtonInLoginPage("Continue") (0.3s)
+2022-04-27T08:40:31.7436981+05:30:Thread#0:B:And I enter password as "Test@123" in Login Page
+2022-04-27T08:40:32.6012988+05:30:Thread#0:T:done: LoginSteps.WhenIEnterPasswordAsInLoginPage("Test@123") (0.9s)
+2022-04-27T08:40:32.6017696+05:30:Thread#0:B:And I click on "Log In" button in Login Page
+2022-04-27T08:40:32.8950456+05:30:Thread#0:T:done: LoginSteps.WhenIClickOnButtonInLoginPage("Log In") (0.3s)
+2022-04-27T08:40:32.8951577+05:30:Thread#0:B:When I click on "Projects" dropdown in Home Page
+2022-04-27T08:40:44.3954230+05:30:Thread#0:T:done: HomeSteps.WhenIClickOnDropdownInHomePage("Projects") (11.5s)
+2022-04-27T08:40:44.3960346+05:30:Thread#0:B:And I select "View all projects" option in Home Page
+2022-04-27T08:40:45.0698638+05:30:Thread#0:T:done: HomeSteps.WhenISelectOptionInHomePage("View all projects") (0.7s)
+2022-04-27T08:40:45.0704994+05:30:Thread#0:B:And I click on "TestProject2_TA_Demo" option in the Home Page
+2022-04-27T08:40:47.2310318+05:30:Thread#0:T:done: HomeSteps.WhenIClickOnOptionInTheHomePage("TestProject2_TA_Demo") (2.2s)
+2022-04-27T08:40:47.2326026+05:30:Thread#0:B:Then I verify the user is navigated to Issues Page
+2022-04-27T08:40:52.4520447+05:30:Thread#0:T:done: IssuesSteps.ThenIVerifyTheUserIsNavigatedToIssuesPage() (5.2s)
+2022-04-27T08:40:52.4525407+05:30:Thread#0:B:And I validate the Project name as "Project:TestProject2_TA_Demo" in Issues Page
+2022-04-27T08:40:52.5811406+05:30:Thread#0:T:done: IssuesSteps.ThenIValidateTheProjectNameAsInIssuesPage("Project:TestProje...") (0.1s)
+2022-04-27T08:40:52.5812905+05:30:Thread#0:B:When I click on the create icon in the Issues Page
+2022-04-27T08:40:53.5375244+05:30:Thread#0:T:done: IssuesSteps.WhenIClickOnTheCreateIconInTheIssuesPage() (1.0s)
+2022-04-27T08:40:53.5382047+05:30:Thread#0:B:Then I verify the project field is populated in Issues Page
+2022-04-27T08:40:55.6896976+05:30:Thread#0:T:done: IssuesSteps.ThenIVerifyTheProjectFieldIsPopulatedInIssuesPage() (2.1s)
+2022-04-27T08:40:55.6902782+05:30:Thread#0:B:When I select Issue type as "BUG" in Issues Page
+2022-04-27T08:40:55.6932284+05:30:Thread#0:T:done: IssuesSteps.WhenISelectIssueTypeAsInIssuesPage("BUG") (0.0s)
+2022-04-27T08:40:55.6936008+05:30:Thread#0:B:And I enter random summary in Issues Page
+2022-04-27T08:41:02.8627966+05:30:Thread#0:T:done: IssuesSteps.WhenIEnterRandomSummaryInIssuesPage() (7.2s)
+2022-04-27T08:41:02.8632918+05:30:Thread#0:B:And I select priority as "Highest" in Issues Page
+2022-04-27T08:41:04.1181178+05:30:Thread#0:T:done: IssuesSteps.WhenISelectPriorityAsInIssuesPage("Highest") (1.3s)
+2022-04-27T08:41:04.1185997+05:30:Thread#0:B:And I enter the select date as this day in Issues Page
+2022-04-27T08:41:05.4028305+05:30:Thread#0:T:done: IssuesSteps.WhenIEnterTheSelectDateAsThisDayInIssuesPage() (1.3s)
+2022-04-27T08:41:05.4033795+05:30:Thread#0:B:And I click on "Create" to create Jira in Issues Page
+2022-04-27T08:41:06.1367451+05:30:Thread#0:T:done: IssuesSteps.WhenIClickOnToCreateJiraInIssuesPage("Create") (0.7s)
+2022-04-27T08:41:06.1371553+05:30:Thread#0:B:And I enter the case summary in the Issues Page
+2022-04-27T08:41:13.0087612+05:30:Thread#0:T:done: IssuesSteps.WhenIEnterTheCaseSummaryInTheIssuesPage() (6.9s)
+2022-04-27T08:41:13.0093854+05:30:Thread#0:B:When I click on the searched incident in Issues Page
+2022-04-27T08:41:14.0185393+05:30:Thread#0:T:done: IssuesSteps.WhenIClickOnTheSearchedIncidentInIssuesPage() (1.0s)
+2022-04-27T08:41:14.0189440+05:30:Thread#0:B:And I click on the Actions icon in the Issues Page
+2022-04-27T08:41:17.9886243+05:30:Thread#0:T:done: IssuesSteps.WhenIClickOnTheActionsIconInTheIssuesPage() (4.0s)
+2022-04-27T08:41:17.9893545+05:30:Thread#0:B:And I select the "Delete" option from the dropdown in Issues Page
+2022-04-27T08:41:18.6546452+05:30:Thread#0:T:done: IssuesSteps.WhenISelectTheOptionFromTheDropdownInIssuesPage("Delete") (0.7s)
+2022-04-27T08:41:18.6549740+05:30:Thread#0:B:And I click on the Delete dialog option in Issues Page
+2022-04-27T08:41:22.9018253+05:30:Thread#0:T:done: IssuesSteps.WhenIClickOnTheDeleteDialogOptionInIssuesPage() (4.2s)
+2022-04-27T08:41:22.9021653+05:30:Thread#0:B:And I click on the "Projects" Hyperlink in Issues Page
+2022-04-27T08:41:30.6853014+05:30:Thread#0:T:done: IssuesSteps.WhenIClickOnTheHyperlinkBreadcrumbInIssuesPage("Projects") (7.8s)
+2022-04-27T08:41:30.6967094+05:30:Thread#0:Scheduler: get next test for thread 0
+2022-04-27T08:41:30.6967950+05:30:Thread#:Scheduler: at the end of normal test queue
+2022-04-27T08:41:30.6968036+05:30:Thread#0:Scheduler: enumerator for thread is at end
+2022-04-27T08:41:30.6968088+05:30:Thread#0:Scheduler: No more tests for thread
+2022-04-27T08:41:35.3690861+05:30:Thread#0: Test #4/0 is finished on thread #0 as Succeeded within 79.6367863 seconds
+2022-04-27T08:41:35.3843630+05:30:Trying to cancel thread
+2022-04-27T08:41:35.3843838+05:30:Thread cancelled
+2022-04-27T08:41:35.3843854+05:30:Trying to cancel thread
+2022-04-27T08:41:35.3843866+05:30:Thread cancelled
+2022-04-27T08:41:35.3843876+05:30:Trying to cancel thread
+2022-04-27T08:41:35.3843886+05:30:Thread cancelled
+2022-04-27T08:41:35.3843894+05:30:Trying to cancel thread
+2022-04-27T08:41:35.3843905+05:30:Thread cancelled
+2022-04-27T08:41:35.3843914+05:30:Trying to cancel thread
+2022-04-27T08:41:35.3843926+05:30:Thread cancelled
+2022-04-27T08:41:35.4001583+05:30:Thread#-1:Scheduler: get next test for thread -1
+2022-04-27T08:41:35.4001927+05:30:Thread#:Scheduler: at the end of normal test queue
+2022-04-27T08:41:35.4001965+05:30:Thread#-1:Scheduler: enumerator for thread is at end
+2022-04-27T08:41:35.4981639+05:30;Thread#12;Info;test run finished
+2022-04-27T08:41:35.4986682+05:30;Thread#12;Info;publishing test results
+2022-04-27T08:41:35.4990926+05:30;Thread#12;Info;Not publishing results.
+2022-04-27T08:41:35.4993938+05:30;Thread#12;Info;test results published
+2022-04-27T08:41:35.4996487+05:30;Thread#12;Info;generating reports
+2022-04-27T08:41:35.7536910+05:30;Thread#12;Info;Starting external report generation process
+2022-04-27T08:41:41.9562816+05:30;Thread#12;Info;Successfully generated reports.
+2022-04-27T08:41:41.9605878+05:30;Thread#12;Info;Successfully generated reports
+2022-04-27T08:41:41.9769095+05:30:Total: 1
+2022-04-27T08:41:41.9795070+05:30:Succeeded: 1
+2022-04-27T08:41:41.9799622+05:30:Ignored: 0
+2022-04-27T08:41:41.9802804+05:30:Pending: 0
+2022-04-27T08:41:41.9802854+05:30:Skipped: 0
+2022-04-27T08:41:41.9805515+05:30:Failed: 0
+2022-04-27T08:41:41.9919182+05:30;VSTestExecutionThread;Info;Adding attachments to VSTest
+2022-04-27T08:41:41.9919936+05:30;VSTestExecutionThread;Info;adding Test Execution Report 'C:\Users\subkrish\source\repos\Assessment\TestResults\TestRunReport.html'
+========== End of log file ==========

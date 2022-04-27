@@ -1,0 +1,90 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup Condition="$([MSBuild]::IsOSPlatform('Windows'))">
+		<DriverType>win32</DriverType>
+	</PropertyGroup>
+	<PropertyGroup Condition="$([MSBuild]::IsOSPlatform('OSX'))">
+		<DriverType>mac64</DriverType>
+	</PropertyGroup>
+	<PropertyGroup Condition="$([MSBuild]::IsOSPlatform('Linux'))">
+		<DriverType>linux64</DriverType>
+	</PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Nullable>enable</Nullable>
+	  <Browser>Chrome</Browser>
+	  <ChromeDriverVersion>101.0.4951.15</ChromeDriverVersion>
+	  <EdgeDriverVersion>92.0.902.84</EdgeDriverVersion>
+	  <GeckoDriverVersion>v0.29.1</GeckoDriverVersion>
+	  <ChromeDriverUrl>http://chromedriver.storage.googleapis.com/$(ChromeDriverVersion)/chromedriver_$(DriverType).zip</ChromeDriverUrl>
+	  <EdgeDriverUrl>https://msedgedriver.azureedge.net/$(EdgeDriverVersion)/edgedriver_$(DriverType).zip</EdgeDriverUrl>
+	  <GeckoDriverUrl>https://github.com/mozilla/geckodriver/releases/download/$(GeckoDriverVersion)/geckodriver-$(GeckoDriverVersion)-$(DriverType).zip</GeckoDriverUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="NUnit" Version="3.13.2" />
+	  <PackageReference Include="NUnit3TestAdapter" Version="4.1.0" />
+	  <PackageReference Include="Selenium.Support" Version="4.1.0" />
+	  <PackageReference Include="Selenium.WebDriver" Version="4.1.0" />
+	  <PackageReference Include="SolidToken.SpecFlow.DependencyInjection" Version="3.9.1" />
+	  <PackageReference Include="SpecFlow" Version="3.9.40" />
+	  <PackageReference Include="SpecRun.SpecFlow" Version="3.9.31" />
+	  <PackageReference Include="SpecRun.Runner" Version="3.9.31" />
+	  <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
+	  <PackageReference Include="Microsoft.Identity.Client" Version="4.32.1" />
+	  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+	  <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+	  <PackageReference Include="Bogus" Version="33.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="TestResults\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<_CopyItems Include="Resources\**\*.*" />
+	</ItemGroup>
+
+	<Target Name="CopySettings" AfterTargets="Build">
+		<Copy SourceFiles="appSettings.json" DestinationFolder="bin\$(Configuration)\netcoreapp3.1" SkipUnchangedFiles="false" OverwriteReadOnlyFiles="true" />
+		<Copy SourceFiles="Default.srprofile" DestinationFolder="bin\$(Configuration)\netcoreapp3.1" SkipUnchangedFiles="false" OverwriteReadOnlyFiles="true" />
+		<Copy SourceFiles="MyReportTemplate.cshtml" DestinationFolder="bin\$(Configuration)\" SkipUnchangedFiles="false" OverwriteReadOnlyFiles="true" />
+		<Copy SourceFiles="@(_CopyItems)" DestinationFolder="bin\$(Configuration)\netcoreapp3.1\Resources" SkipUnchangedFiles="false" OverwriteReadOnlyFiles="true" />
+	</Target>
+
+	<Target Name="DownloadChromeDriver" BeforeTargets="Build" Condition="'$(Browser)' == 'Chrome'">
+		<DownloadFile Condition="!Exists('$(CHROMEWEBDRIVER)')" SourceUrl="$(ChromeDriverUrl)" DestinationFolder="$(MSBuildProjectDirectory)\bin\$(Configuration)\netcoreapp3.1">
+			<Output TaskParameter="DownloadedFile" ItemName="Content" />
+		</DownloadFile>
+		<Copy Condition="Exists('$(CHROMEWEBDRIVER)')" SourceFiles="$(CHROMEWEBDRIVER)\chromedriver.exe" DestinationFolder="$(MSBuildProjectDirectory)\bin\$(Configuration)\netcoreapp3.1\" OverwriteReadOnlyFiles="true" />
+		<Unzip Condition="!Exists('$(CHROMEWEBDRIVER)')" SourceFiles="$(MSBuildProjectDirectory)\bin\$(Configuration)\netcoreapp3.1\chromedriver_$(DriverType).zip" DestinationFolder="$(MSBuildProjectDirectory)\bin\$(Configuration)\netcoreapp3.1\" OverwriteReadOnlyFiles="true" />
+		<Exec Condition="$([MSBuild]::IsOSPlatform('OSX')) AND !Exists('$(CHROMEWEBDRIVER)')" Command="chmod +x '$(MSBuildProjectDirectory)/bin/$(Configuration)/netcoreapp3.1/chromedriver'" />
+	</Target>
+
+	<Target Name="DownloadEdgeDriver" BeforeTargets="Build" Condition="'$(Browser)' == 'Edge'">
+		<DownloadFile Condition="!Exists('$(EDGEWEBDRIVER)')" SourceUrl="$(EdgeDriverUrl)" DestinationFolder="$(MSBuildProjectDirectory)\bin\$(Configuration)\netcoreapp3.1">
+			<Output TaskParameter="DownloadedFile" ItemName="Content" />
+		</DownloadFile>
+		<Copy Condition="Exists('$(EDGEWEBDRIVER)')" SourceFiles="$(EDGEWEBDRIVER)\msedgedriver.exe" DestinationFolder="$(MSBuildProjectDirectory)\bin\$(Configuration)\netcoreapp3.1\" OverwriteReadOnlyFiles="true" />
+		<Unzip Condition="!Exists('$(EDGEWEBDRIVER)')" SourceFiles="$(MSBuildProjectDirectory)\bin\$(Configuration)\netcoreapp3.1\edgedriver_$(DriverType).zip" DestinationFolder="$(MSBuildProjectDirectory)\bin\$(Configuration)\netcoreapp3.1\" OverwriteReadOnlyFiles="true" />
+		<Move SourceFiles="$(MSBuildProjectDirectory)\bin\$(Configuration)\netcoreapp3.1\msedgedriver.exe" DestinationFiles="$(MSBuildProjectDirectory)\bin\$(Configuration)\netcoreapp3.1\MicrosoftWebDriver.exe" />
+		<Exec Condition="$([MSBuild]::IsOSPlatform('OSX')) AND !Exists('$(EDGEWEBDRIVER)')" Command="chmod +x '$(MSBuildProjectDirectory)/bin/$(Configuration)/netcoreapp3.1/microsoftwebdriver'" />
+	</Target>
+
+	<Target Name="DownloadGeckoDriver" BeforeTargets="Build" Condition="'$(Browser)' == 'Firefox'">
+		<DownloadFile Condition="!Exists('$(GECKOWEBDRIVER)')" SourceUrl="$(GeckoDriverUrl)" DestinationFolder="$(MSBuildProjectDirectory)\bin\$(Configuration)\netcoreapp3.1">
+			<Output TaskParameter="DownloadedFile" ItemName="Content" />
+		</DownloadFile>
+		<Copy Condition="Exists('$(GECKOWEBDRIVER)')" SourceFiles="$(GECKOWEBDRIVER)\geckodriver.exe" DestinationFolder="$(MSBuildProjectDirectory)\bin\$(Configuration)\netcoreapp3.1\" OverwriteReadOnlyFiles="true" />
+		<Unzip Condition="!Exists('$(GECKOWEBDRIVER)')" SourceFiles="$(MSBuildProjectDirectory)\bin\$(Configuration)\netcoreapp3.1\geckodriver-$(GeckoDriverVersion)-$(DriverType).zip" DestinationFolder="$(MSBuildProjectDirectory)\bin\$(Configuration)\netcoreapp3.1\" OverwriteReadOnlyFiles="true" />
+		<Exec Condition="$([MSBuild]::IsOSPlatform('OSX')) AND !Exists('$(GECKOWEBDRIVER)')" Command="chmod +x '$(MSBuildProjectDirectory)/bin/$(Configuration)/netcoreapp3.1/geckodriver'" />
+	</Target>
+</Project>
